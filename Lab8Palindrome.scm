@@ -1,11 +1,5 @@
-;reverse function
-(define (reverser alist)
-(cond ((null? alist) '())
-      (else (append (reverser (cdr alist)) (list (car alist))))))
-
-
 (define (palindrome alist)
-  (check-palindrome alist (reverser alist)))
+  (check-palindrome alist (reverse alist)))
 
 (define (check-palindrome flist slist)
   (cond ((null? flist) 'true)
